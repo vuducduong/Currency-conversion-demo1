@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency-conversion-demo1</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td ><input type="text" id="first"></td>
+        <td >
+            <select id="second">
+                <option value="23000">Việt Nam</option>
+                <option value="1">USA</option>
+                <option value="105">Yên</option>
+            </select>
+        </td>
+        <td>
+            <select id="third">
+            <option value="1">USD</option>
+            <option value="23000">VND</option>
+            <option value="105">Yên</option>
+            </select>
+        </td>
+        <td><button type="button" onclick="letGet()">Convert</button></td>
+    </tr>
+</table>
+<p id = "final">Result</p>
+<script>
+    function letGet() {
+        let QD1 = document.getElementById("first").value;
+        let QD2 = document.getElementById("second").value;
+        let QD3 = document.getElementById("third").value;
+        let money = QD1*QD3/QD2;
+document.getElementById("final").innerHTML="Result: " + money;}
+</script>
+<p ></p>
+</body>
+</html>
